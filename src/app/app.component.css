@@ -1,0 +1,26 @@
+.navBar{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.mainPage{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.mainItems{
+  width: 40%;
+  display: flex;
+  text-align: center;
+  flex-flow: column wrap;
+  padding: 5px;
+  border: 1px solid black;
+  margin: 15px;
+  border-radius: 10px;
+  align-items: center;
+  justify-items: center;
+}
+

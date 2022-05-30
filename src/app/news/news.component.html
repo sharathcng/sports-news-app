@@ -1,0 +1,17 @@
+<div *ngIf="crickNews">
+  <div *ngFor="let item of crickNews.storyList">
+    <div class="container" *ngIf="item.story">
+      <div class="leftPart">
+        <div class="title">{{item.story.hline}}</div>
+        <div class="leftDown">
+          <div class="author">League: {{item.story.context}}</div>
+          <div class="date">Published: {{item.story.coverImage.source}}</div>
+        </div>
+      </div>
+      <div class="rightPart">
+        <img *ngIf="item.story" mat-card-sm-image alt="No Image"
+          src="{{'https://m.cricbuzz.com/a/img/v1/200x200/i1/c'+item.story.coverImage.id+'/'+item.story.coverImage.caption+'.jpg'}}">
+      </div>
+    </div>
+  </div>
+</div>

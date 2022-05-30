@@ -1,0 +1,36 @@
+<div class="toggleHeader">
+  <mat-button-toggle-group appearance="legacy" name="fontStyle" aria-label="Font Style">
+
+    <mat-button-toggle value="international" (click)="getMatchList('International')">International Matches
+    </mat-button-toggle>
+
+    <mat-button-toggle value="league" (click)="getMatchList('League')">League Matches
+    </mat-button-toggle>
+
+    <mat-button-toggle value="domestic" (click)="getMatchList('Domestic')">Domestic Matches
+    </mat-button-toggle>
+
+    <mat-button-toggle value="women" (click)="getMatchList('Women')">Women Matches
+    </mat-button-toggle>
+
+  </mat-button-toggle-group>
+</div>
+
+<div *ngIf="upComingMatch">
+  <div *ngFor="let item of upComingMatch.matchScheduleMap">
+    <div class="parent" *ngIf="item.scheduleAdWrapper">
+      <div *ngFor="let item1 of item.scheduleAdWrapper.matchScheduleList">
+        <div class="parent" *ngFor="let item2 of item1.matchInfo">
+          <mat-card class="example-card">
+            <mat-card-title>{{item2.team1.teamName}} vs {{item2.team2.teamName}}</mat-card-title>
+            <mat-card-subtitle>{{item1.seriesName}} - {{item2.matchDesc}}</mat-card-subtitle>
+            <mat-card-content>
+              <p>Date: {{item.scheduleAdWrapper.date}}</p>
+              <p>Venue: {{item2.venueInfo.ground}} Ground, {{item2.venueInfo.city}}</p>
+            </mat-card-content>
+          </mat-card>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

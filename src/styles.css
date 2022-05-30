@@ -1,1 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body {   background-color: #0E1837;
+  margin: 0 auto;
+  color: white; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.container::ng-deep * {
+  align-items: center !important;
+}

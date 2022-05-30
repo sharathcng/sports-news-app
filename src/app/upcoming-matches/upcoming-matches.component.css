@@ -1,0 +1,11 @@
+.example-card {
+  max-width: 400px;
+  min-width: 400px;
+}
+.parent {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 5px;
+}
+

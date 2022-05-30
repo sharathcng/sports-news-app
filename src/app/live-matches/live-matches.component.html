@@ -1,0 +1,26 @@
+<ng-template #elseBlock>No live matches going on, come after some time.</ng-template>
+<div *ngIf="liveMatch; else elseBlock">
+  <div *ngFor="let item of liveMatch.typeMatches">
+    {{item.matchType}}
+    <div *ngFor="let item1 of item.seriesMatches">
+      <div *ngIf="item1.seriesAdWrapper">
+        <div *ngFor="let item2 of item1.seriesAdWrapper.matches">
+          <b> Series : {{item2.matchInfo.seriesName}} - {{item2.matchInfo.matchDesc}} </b><br>
+          {{item2.matchInfo.team1.teamName}} vs {{item2.matchInfo.team2.teamName}}
+
+          <div *ngIf="item2.matchScore.team1Score">
+            {{item2.matchInfo.team1.teamSName}} -
+            {{item2.matchScore.team1Score.inngs1.runs}}/{{item2.matchScore.team1Score.inngs1.wickets}},
+            {{item2.matchScore.team1Score.inngs1.overs}} Overs
+          </div>
+
+          <div *ngIf="item2.matchScore.team2Score">
+            {{item2.matchInfo.team2.teamSName}} -
+            {{item2.matchScore.team2Score.inngs1.runs}}/{{item2.matchScore.team2Score.inngs1.wickets}},
+            {{item2.matchScore.team2Score.inngs1.overs}} Overs
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
