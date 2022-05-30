@@ -6,5 +6,5 @@ export const environment = {
   CricketXRapidAPIHostHeaderValue: 'cricbuzz-cricket.p.rapidapi.com',
   CricketXRapidAPIHostKeyName: 'X-RapidAPI-Key',
   CricketXRapidAPIHostKeyValue: 'a36aafa4dbmsh295d5d8a047e859p12cf22jsnef463b0f0965',
-
+  UpcomingBaseUrl: 'https://cricbuzz-cricket.p.rapidapi.com/schedule/v1'
 };
