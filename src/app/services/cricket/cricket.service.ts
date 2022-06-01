@@ -5,7 +5,6 @@ import { CricketMatchData } from 'src/app/models/cricketMatches.model';
 import { CricketNewsData } from 'src/app/models/cricketNews.model';
 import { NewsDetailData } from 'src/app/models/newsDetail.model';
 import { UpcomingData } from 'src/app/models/upcoming.model';
-import { NewsDetailComponent } from 'src/app/news-detail/news-detail.component';
 import { environment } from 'src/environments/environment';
 
 @Injectable({
