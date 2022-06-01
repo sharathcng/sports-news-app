@@ -1,0 +1,24 @@
+<div *ngIf="newsDetailObj">
+  <div class="page">
+    <div class="context">
+      {{newsDetailObj.context}}
+    </div>
+    <div class="headline">
+      {{newsDetailObj.headline}}
+    </div>
+    <div *ngFor="let author of newsDetailObj.authors" class="authors">
+      by {{author.name}} published on {{newsDetailObj.publishTime| date: 'EEEE, MMMM d, y'}}
+    </div>
+    <div class="news-image">
+      <img mat-card-sm-image alt="No Image"
+        src="{{'https://m.cricbuzz.com/a/img/v1/650x350/i1/c'+newsDetailObj.coverImage.id+'/'+newsDetailObj.coverImage.caption+'.jpg'}}">
+    </div>
+    <p>To view this story from cricbuzz.com click here <a
+        href="{{newsDetailObj.appIndex.webURL}}">{{newsDetailObj.appIndex.seoTitle}}</a></p>
+    <div *ngFor="let content of newsDetailObj.content" class="content">
+      <p *ngIf="content.content">
+        {{content.content.contentValue}}
+      </p>
+    </div>
+  </div>
+</div>

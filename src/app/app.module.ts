@@ -13,7 +13,8 @@ import { LiveMatchesComponent } from './live-matches/live-matches.component';
 import { UpcomingMatchesComponent } from './upcoming-matches/upcoming-matches.component';
 import { NewsComponent } from './news/news.component';
 import { MatCardModule } from '@angular/material/card';
-
+import { NewsDetailComponent } from './news-detail/news-detail.component';
+import { MatGridListModule } from '@angular/material/grid-list';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { MatCardModule } from '@angular/material/card';
     NavbarComponent,
     LiveMatchesComponent,
     UpcomingMatchesComponent,
-    NewsComponent
+    NewsComponent,
+    NewsDetailComponent
   ],
   imports: [
     BrowserModule,
@@ -29,7 +31,8 @@ import { MatCardModule } from '@angular/material/card';
     BrowserAnimationsModule,
     MatButtonToggleModule,
     HttpClientModule,
-    MatCardModule
+    MatCardModule,
+    MatGridListModule
 
   ],
   providers: [],

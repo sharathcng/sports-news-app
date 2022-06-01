@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CricketNewsData } from '../models/cricketNews.model';
+import { NewsDetailData } from '../models/newsDetail.model';
 import { CricketService } from '../services/cricket/cricket.service';
 
 @Component({
@@ -11,7 +12,7 @@ export class NewsComponent implements OnInit {
 
   crickNews?: CricketNewsData
 
-  constructor(private cricketService: CricketService) { }
+  constructor(protected cricketService: CricketService) { }
 
   ngOnInit(): void {
     this.getCricketNews()
