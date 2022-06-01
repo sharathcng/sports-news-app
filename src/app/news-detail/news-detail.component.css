@@ -36,3 +36,16 @@ a{
   color: bisque;
   font-family: 'Times New Roman', Times, serif;
 }
+
+
+img{
+  width: 100%;
+  height: 40%;
+}
+
+@media only screen and (max-width: 600px) {
+  img {
+    width: 50%;
+  height: 20%;
+  }
+}
