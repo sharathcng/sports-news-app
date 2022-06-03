@@ -1,7 +1,20 @@
-<div class="navBar">
+<!-- <div class="navBar">
   <app-navbar></app-navbar>
 </div>
 <div class="mainPage">
   <router-outlet></router-outlet>
+</div> -->
 
+
+<div class="container">
+  <app-navbar></app-navbar>
+
+  <div class="bodyPart">
+    <div class="leftPart">
+      <router-outlet></router-outlet>
+    </div>
+    <div class="rightPart">
+      <app-live-matches></app-live-matches>
+    </div>
+  </div>
 </div>

@@ -1,20 +1,48 @@
-<div *ngIf="crickNews">
+<!-- <ng-template #newsItem> -->
+<!-- <div class="newsItems" *ngIf="crickNews">
   <div *ngFor="let item of crickNews.storyList">
     <mat-card *ngIf="item.story" class="example-card">
       <mat-card-title-group [routerLink]="['newsDetailPage', item.story.id]" routerLinkActive="active">
         <mat-card-title>{{ item.story.hline }}</mat-card-title>
         <mat-card-subtitle>{{ item.story.context }}</mat-card-subtitle>
         <img mat-card-sm-image src="{{
-          'https://m.cricbuzz.com/a/img/v1/100x100/i1/c' +
-            item.story.coverImage.id +
-            '/' +
-            item.story.coverImage.caption +
-            '.jpg'
-        }}">
+            'https://m.cricbuzz.com/a/img/v1/100x100/i1/c' +
+              item.story.coverImage.id +
+              '/' +
+              item.story.coverImage.caption +
+              '.jpg'
+          }}">
       </mat-card-title-group>
       <mat-card-content>
         {{item.story.intro}}
       </mat-card-content>
     </mat-card>
   </div>
-</div>
+</div> -->
+<!-- </ng-template> -->
+<!-- <mat-spinner *ngIf="showSpinner; else newsItem"></mat-spinner> -->
+
+
+<ng-template #newsItem>
+  <div *ngIf="crickNews">
+    <div *ngFor="let item of crickNews.storyList">
+      <mat-card *ngIf="item.story" class="example-card">
+        <mat-card-title-group [routerLink]="['newsDetailPage', item.story.id]" routerLinkActive="active">
+          <mat-card-title>{{ item.story.hline }}</mat-card-title>
+          <mat-card-subtitle>{{ item.story.context }}</mat-card-subtitle>
+          <img mat-card-md-image src="{{
+            'https://m.cricbuzz.com/a/img/v1/100x100/i1/c' +
+              item.story.coverImage.id +
+              '/' +
+              item.story.coverImage.caption +
+              '.jpg'
+          }}">
+        </mat-card-title-group>
+        <mat-card-content>
+          {{item.story.intro}}
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+</ng-template>
+<mat-spinner *ngIf="showSpinner; else newsItem"></mat-spinner>

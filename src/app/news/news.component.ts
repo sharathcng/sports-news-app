@@ -14,6 +14,8 @@ export class NewsComponent implements OnInit {
 
   constructor(protected cricketService: CricketService) { }
 
+  showSpinner = true
+
   ngOnInit(): void {
     this.getCricketNews()
   }
@@ -23,6 +25,7 @@ export class NewsComponent implements OnInit {
       .subscribe({
         next: (response) => {
           this.crickNews = response
+          this.showSpinner = false
           console.log(response)
         }
       })

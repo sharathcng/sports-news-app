@@ -1,13 +1,14 @@
-<div class="toggleHeader">
-  <mat-button-toggle-group appearance="legacy" name="fontStyle" aria-label="Font Style">
-
-    <mat-button-toggle routerLink="" routerLinkActive="active" value="bold">News</mat-button-toggle>
-
-    <mat-button-toggle routerLink="live" routerLinkActive="active" value="italic">LiveScores
-    </mat-button-toggle>
-
-    <mat-button-toggle routerLink="upcoming" routerLinkActive="active" value="underline">Upcoming Matches
-    </mat-button-toggle>
-
-  </mat-button-toggle-group>
-</div>
+<mat-toolbar class="navBar mat-elevation-z8">
+  <span>
+    <button mat-mini-fab>
+      <mat-icon>sports_cricket</mat-icon>
+    </button>
+    CricNews
+  </span>
+  <div class="navs">
+    <a mat-button routerLink="" routerLinkActive="active">Home</a>
+    <a mat-button routerLink="live" routerLinkActive="active">Live Scores</a>
+    <a mat-button routerLink="upcoming" routerLinkActive="active">Schedules</a>
+    <a mat-raised-button href="#" color="accent">Sign in</a>
+  </div>
+</mat-toolbar>

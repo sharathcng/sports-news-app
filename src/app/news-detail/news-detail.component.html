@@ -13,10 +13,9 @@
       <img mat-card-sm-image alt="No Image"
         src="{{'https://m.cricbuzz.com/a/img/v1/650x350/i1/c'+newsDetailObj.coverImage.id+'/'+newsDetailObj.coverImage.caption+'.jpg'}}">
     </div>
-    <p>To view this story from cricbuzz.com click here <a
-        href="{{newsDetailObj.appIndex.webURL}}">{{newsDetailObj.appIndex.seoTitle}}</a></p>
+    <p><a href="{{newsDetailObj.appIndex.webURL}}" target="_blank">{{newsDetailObj.appIndex.seoTitle}}</a></p>
     <div *ngFor="let content of newsDetailObj.content" class="content">
-      <p *ngIf="content.content">
+      <p *ngIf="content.content.contentType == 'text'">
         {{content.content.contentValue}}
       </p>
     </div>
