@@ -1,11 +1,5 @@
 .example-card {
-  max-width: 400px;
-  min-width: 400px;
-}
-.parent {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin: 5px;
+  background: linear-gradient(90deg, rgba(15,29,66,1) 0%, rgba(16,52,74,1) 15%, rgba(18,75,82,1) 30%, rgba(19,98,90,1) 45%, rgba(19,98,90,1) 55%, rgba(18,75,82,1) 70%, rgba(16,52,74,1) 85%, rgba(15,29,66,1) 100%);
+
 }
 

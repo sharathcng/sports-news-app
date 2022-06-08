@@ -1,14 +1,5 @@
-/* mat-button-toggle-group {
-  background-color: black;
-} */
 
-.navBar{
-  display: flex;
-  justify-content: space-between;
-  border-radius: 10px;
-}
-
-mat-toolbar{
-  margin-top: 5px;
+nav{
+  border-radius: 15px;
   background: linear-gradient(90deg, rgba(19,98,90,1) 0%, rgba(18,75,82,1) 10%, rgba(16,52,74,1) 20%, rgba(15,29,66,1) 30%, rgba(16,52,74,1) 40%, rgba(18,75,82,1) 50%, rgba(19,98,90,1) 60%, rgba(18,75,82,1) 70%, rgba(16,52,74,1) 80%, rgba(15,29,66,1) 90%, rgba(19,98,90,1) 100%);
 }

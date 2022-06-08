@@ -30,14 +30,4 @@ export class UpcomingMatchesComponent implements OnInit {
       })
   }
 
-  // getUpcomingMatchData() {
-  //   this.cricService.getCricUpcomingMatchesData()
-  //     .subscribe({
-  //       next: (response) => {
-  //         console.log(response)
-  //         this.upcomingMatch = response
-  //       }
-  //     })
-  // }
-
 }

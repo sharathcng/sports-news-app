@@ -1,23 +1,35 @@
-<div *ngIf="newsDetailObj">
-  <div class="page">
-    <div class="context">
-      {{newsDetailObj.context}}
+<div *ngIf="newsDetailObj" class="newsDetail text-center container-fluid mt-2 border border-dark rounded">
+  <div class="row">
+    <div class="col">
+      <h4>{{newsDetailObj.context}}</h4>
     </div>
-    <div class="headline">
-      {{newsDetailObj.headline}}
+
+  </div>
+  <div class="row">
+    <div class="col">
+      <h1>{{newsDetailObj.headline}}</h1>
     </div>
-    <div *ngFor="let author of newsDetailObj.authors" class="authors">
+  </div>
+  <div *ngFor="let author of newsDetailObj.authors" class="row">
+    <div class="col">
       by {{author.name}} published on {{newsDetailObj.publishTime| date: 'EEEE, MMMM d, y'}}
     </div>
-    <div class="news-image">
-      <img mat-card-sm-image alt="No Image"
-        src="{{'https://m.cricbuzz.com/a/img/v1/650x350/i1/c'+newsDetailObj.coverImage.id+'/'+newsDetailObj.coverImage.caption+'.jpg'}}">
+  </div>
+  <div class="row">
+    <div class="col-md mx-auto">
+      <img mat-card-sm-image alt="No Image" class="img-fluid"
+        src="{{'https://m.cricbuzz.com/a/img/v1/650x350/i1/c'+newsDetailObj.coverImage.id+'/'+newsDetailObj.coverImage.caption+'.jpg'}}" />
+      <figcaption><a class="text-warning" href="{{newsDetailObj.appIndex.webURL}}"
+          target="_blank">{{newsDetailObj.appIndex.seoTitle}}</a>
+      </figcaption>
     </div>
-    <p><a href="{{newsDetailObj.appIndex.webURL}}" target="_blank">{{newsDetailObj.appIndex.seoTitle}}</a></p>
-    <div *ngFor="let content of newsDetailObj.content" class="content">
-      <p *ngIf="content.content.contentType == 'text'">
-        {{content.content.contentValue}}
-      </p>
+  </div>
+
+  <div *ngFor="let content of newsDetailObj.content" class="row">
+    <div class="col-12">
+      <div *ngIf="content.content.contentType == 'text'">
+        <p>{{content.content.contentValue}}</p>
+      </div>
     </div>
   </div>
 </div>

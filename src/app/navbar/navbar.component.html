@@ -1,14 +1,30 @@
-<mat-toolbar class="navBar mat-elevation-z8">
-  <span>
-    <button mat-mini-fab>
-      <mat-icon>sports_cricket</mat-icon>
+<nav class="navbar navbar-expand-lg bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#"><button mat-mini-fab>
+        <mat-icon>sports_cricket</mat-icon>
+      </button>
+      CricNews</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
     </button>
-    CricNews
-  </span>
-  <div class="navs">
-    <a mat-button routerLink="" routerLinkActive="active">Home</a>
-    <a mat-button routerLink="live" routerLinkActive="active">Live Scores</a>
-    <a mat-button routerLink="upcoming" routerLinkActive="active">Schedules</a>
-    <a mat-raised-button href="#" color="accent">Sign in</a>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto">
+      </ul>
+      <ul class="navbar-nav justify-content-end">
+        <li class="nav-item">
+          <a class="nav-link" mat-button routerLink="" routerLinkActive="active">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" mat-button routerLink="live" routerLinkActive="active">Live Scores</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" mat-button routerLink="upcoming" routerLinkActive="active">Schedules</a>
+        </li>
+        <li class="nav-item">
+          <a mat-raised-button href="#" color="accent">Sign in</a>
+        </li>
+      </ul>
+    </div>
   </div>
-</mat-toolbar>
+</nav>
